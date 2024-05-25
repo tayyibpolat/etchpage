@@ -17,20 +17,20 @@ body, html {
     border: 1px solid grey; /* Optional: for visual separation */
     margin-top: auto; /* Push container to the bottom */
     margin-bottom: 30px;
+    --rows: 1; /* Default to 1 row if not set by JavaScript */
 }
 
 /* Style for grid items */
 .grid-item {
-    flex: 1 1 auto;
-    min-width: 10px; /* Minimum width for each item */
+    flex: 1 0 50px; /* flex-grow: 1, flex-shrink: 0, flex-basis: 50px */
     box-sizing: border-box;
-    min-height: 10px; /* Minimum height for each item */
     border: 1px solid grey; /* Optional: for visual separation */
+    height: calc(100% / var(--rows)); /* Set height based on the number of rows */
 }
 
 /* Style for the button */
 button {
-    margin: 30px auto 10px auto; 
+    margin: 30px auto 10px auto;
     border: 1px solid black;
     color: black;
     width: 50px;
