@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.textContent = "Button";
     document.body.appendChild(btn);
     document.body.insertBefore(btn, container);
+    
     btn.addEventListener('click', function() {
         let input = prompt("choose a number between 0 and 100");
         let num = input * input;
