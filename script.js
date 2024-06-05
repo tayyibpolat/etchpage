@@ -10,11 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let input = prompt("Choose a number between 0 and 100");
         let num = parseInt(input, 10);
 
-        if (isNaN(num) || num < 0 || num > 100) {
-            alert("Please choose a valid number between 0 and 100");
-            return;
-        }
-
         container.innerHTML = ''; // Clear previous items
 
         let itemsPerRow = Math.floor(container.clientWidth / 50); // Calculate items per row based on item width
@@ -34,3 +29,4 @@ document.addEventListener('DOMContentLoaded', () => {
         container.style.setProperty('--rows', rows);
     });
 });
+
