@@ -27,9 +27,21 @@ body, html {
 }
 
 button {
-    margin: 30px auto 10px auto;
     border: 1px solid black;
     color: black;
     width: 50px;
     height: 20px;
+}
+.reset{
+    border: 1px solid black;
+    color: black;
+    width: 50px;
+    height: 20px;
+}
+
+.btnc{
+    margin-top: 20px;
+    display: flex;
+    width: 110px;
+    justify-content: space-between;    
 }

@@ -1,9 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('container');
+    let btnc = document.createElement("div");
+    btnc.className = "btnc";
+    document.body.insertBefore(btnc, container)
+
     let btn = document.createElement("button");
     btn.textContent = "Button";
-    //document.body.appendChild(btn);
-    document.body.insertBefore(btn, container);
+    btnc.appendChild(btn);
+
+    let res = document.createElement('button');
+    res.textContent = "Reset";
+    res.className = 'reset';
+    btnc.appendChild(res)
+    res.addEventListener("click", function(){
+        container.innerHTML = ''; 
+    });
 
     btn.addEventListener('click', function() {
         container.innerHTML = ''; // Clear previous items
